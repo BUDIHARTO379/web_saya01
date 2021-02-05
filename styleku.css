@@ -1,0 +1,183 @@
+* {
+	padding:0;
+	margin:0;
+	font-family: sans-serif;
+}
+a {  /*mengatur semua huruf di header*/
+	color: inherit; 
+	text-decoration: none; /*menghilangkan garis bawah*/
+}
+.medsos {  /*mengatur blok header sosmed*/
+	padding:5px 0;
+	background-color: #148F77;
+	color: white;
+}
+.medsos ul li {  /*mengatur header sosmed*/
+	display: inline-block; /*agar menjadi horizontal*/
+	color: #fff;
+	margin-right: 10px; /*memberi jarak atar logo sosmed*/
+}
+.container { /*mengatur agar header sosmed begeser ke tengah*/
+	width:80%;
+	margin:0 auto;
+}
+.container:after {  /*setting agar border kontener mengikuti isi konten yaitu h1*/
+	content:'';
+	display: block;
+	clear: both;
+}
+header h1 {
+	float: left;/*agar tetap di sebelah kanan*/
+	padding:15px 0; /*agar sesuai dengan border blok header*/
+	color: #148F77;
+}
+header ul {
+	float: right; /*agar menu merapat ke kiri*/
+}
+header ul li {
+	display: inline-block; /* menu menjadi horizontal*/
+}
+header ul li a {   /*mengatur menu agar sesuai dengan border blok header meggunakan padding*/
+	padding:30px 20px;
+	display: inline-block;
+}
+header ul li a:hover {  /*agar ketika menu di klik berubah warnah*/
+	background-color: #148F77;
+	color: #fff;
+}
+.active {  /*memberi tanda warna ketika kita di menu yg aktif/di klik*/
+	background-color: #148F77;
+	color: #fff;
+}
+.banner {
+	height: 60vh;
+	background-image: url('./imgg/gb5.jpg');
+	background-size: cover; /*agar baner tampil full */
+	position: relative; /*agar posisi transparan full hanya di baner*/
+	display: flex; /*berfungsi untuk memanipulasi layout agar bisa merubah posisi dari bok di dalam container*/
+	justify-content: center; /*agar tulisan welcome di tengah*/
+	align-items: center;
+}
+.banner:after {  /*mengatur posisi baner/gamabar dan mengatur latar belakang menjadi transparan*/
+	content:'';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(20, 143, 119, .6); /*agar menjadi transparan*/
+}
+.banner h2 {  /*mengatur warna h2 */
+	color: #fff;
+	z-index: 1; /*mengatur agar tulisan welcome tidak tertindih background baner*/
+	padding: 20px 25px;
+	border:3px solid #fff;
+}
+section {
+	padding:50px 0;  /*mengatur lebar baner*/
+}
+section h3 {  /*mengatur posisi dan warna about*/
+	text-align: center;
+	padding:20px 0;
+	color: #148F77;
+	margin-bottom: 25px;   /*memberi spaci antara about dengan isi articel*/ 
+}
+.about,
+.service {  /*alternatif mengatur jarak about dengan service*/
+	padding-bottom: 100px;
+}
+.about p {   /*mengatur isi artikel di dalam about*/
+	color: #666;
+	word-spacing: 3px;
+	line-height: 30px;
+	margin-bottom: 25px;
+	text-align: justify;
+}
+.service { 
+	background-color: #f9f9f9;
+}
+.contact1{ 
+	background-color: #FFFFFo;
+	}
+.layanan{
+		background-color: #FFFACD;
+		}
+.box { /*memberi warna pada bok service*/
+	color: #148F77;
+}
+.box:after { /*memberi clear both untuk mengatur ketebalan garis bok service di sisi atas dan kanan di karenakan mengikuti isi dari bok col-4/perintah float:left*/
+	content: '';
+	display: block;
+	clear: both;
+}
+.box .col-4 {   /*mengatur setiap box service*/
+	width:30%;
+	padding:20px;
+	box-sizing: border-box; /*mengatur agar lebar tetap/utuh*/
+	text-align: center;  /*mengatur tulisan h4 agar di tengah kotak icon*/
+	float: left;  /*agar box service menjadi horizontal*/
+	margin-left: 150px;
+	line-height: 30px;
+	
+}
+.box .contact {   /*mengatur setiap box service*/
+	width:25%;
+	padding: 20px;
+	box-sizing: border-box; /*mengatur agar lebar tetap/utuh*/
+	text-align: center;  /*mengatur tulisan h4 agar di tengah kotak icon*/
+	float: left;  /*agar box service menjadi horizontal*/
+	}
+.box .contact h4 {   /*mengatur jarah tulisan h4 dengan icon service*/
+	margin:20px 0;
+	}
+
+.box .col-4 h4 {   /*mengatur jarah tulisan h4 dengan icon service*/
+	margin:20px 0;
+}
+.area {
+	width:100%;
+	padding: 10px;
+	padding-bottom: 50px;
+	text-align: center;  /*mengatur agar icon berada di tengah kotak icon*/
+	line-height: 40px;
+	font-size: 16px;  /*mengatur besar kecilnya icon*/
+	}
+footer {  /*mengatur bagian footer*/
+	padding:30px 0; /*mengatur sisinya*/
+	background-color: #333;
+	color: #fff;  /*mengatur tulisan agar berwarna putih*/
+	text-align: center; /*agar tulisan di tengah*/
+}
+.label { /*memberi warna ke label*/
+	background-color: #148F77;
+	color: #fff;
+}
+@keyframes puterin { /*mengatur agar kotak loading berputar 360%*/
+	100% {
+		transform: rotate(360deg);
+	}
+}
+@media screen and (max-width: 768px){  /*mengatur agar tampilan responsif ketika di gunakan di mobile/hp*/
+	.container {
+		width:90%;
+	}
+	header h1 {  /*agar h1 menjadi di tengah ketika di mode hp*/
+		text-align: center;
+		float: none;
+	}
+	header ul { /*agar menu menjadi di tengah ketika di mode hp*/
+		text-align: center;
+		float: none;
+	}
+	.box  {  /*agar service menjadi di tengah ketika di mode hp*/
+		width:100%;
+		float: none;
+		margin-bottom: 20px;
+	}
+	.box .contact {  /*agar service menjadi di tengah ketika di mode hp*/
+		width:100%;
+		float: none;
+		margin-bottom: 20px;
+	}
+}
